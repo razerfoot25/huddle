@@ -1,1 +1,11 @@
+@use "../components/buttons" as b;
 // nav layouts
+.huddle_Nav {
+  &--logo {
+    width: 30%;
+  }
+
+  &--btn {
+    @include b.btn-white;
+  }
+}

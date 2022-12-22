@@ -1,1 +1,28 @@
-//font faces
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap");
+
+body {
+  font-size: 18px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Poppins", sans-serif;
+  font-weight: --fw-accent-600;
+}
+
+p,
+a,
+li {
+  font-family: "Open Sans", sans-serif;
+  font-weight: --fw-primary-400;
+  line-height: 1.7;
+}
+button {
+  font-family: "Open Sans", sans-serif;
+  font-weight: --fw-primary-700;
+}

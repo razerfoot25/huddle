@@ -1,0 +1,31 @@
+.btn {
+  padding: 0.5em 2.5em;
+  border: 0;
+  border-radius: 2em;
+}
+@mixin btn-white {
+  @extend .btn;
+  font-weight: var(--fw-primary-700);
+  color: var(--clr-neutral-600);
+  box-shadow: 3px 6px 15px -8px var(--clr-neutral-500);
+
+  &:hover {
+    opacity: 0.8;
+    cursor: pointer;
+  }
+}
+
+@mixin btn-red {
+  @extend .btn;
+  padding: 1em 1.5em;
+
+  font-weight: var(--fw-primary-700);
+  color: var(--clr-neutral-400);
+  background-color: var(--clr-primary-700);
+  box-shadow: 3px 6px 15px -8px var(--clr-neutral-500);
+
+  &:hover {
+    opacity: 0.8;
+    cursor: pointer;
+  }
+}

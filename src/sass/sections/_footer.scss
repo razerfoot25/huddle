@@ -1,0 +1,32 @@
+.huddle_footer {
+  position: relative;
+  z-index: 1;
+  background-color: var(--clr-neutral-600);
+  color: var(--clr-neutral-400);
+  padding-top: var(--2xl);
+  &--logo {
+    background-color: var(--clr-neutral-400);
+    height: 1.75rem;
+    mask-image: url("../images/logo.svg");
+    mask-repeat: no-repeat;
+    mask-size: contain;
+  }
+
+  > div ul li div {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    img {
+      margin-top: var(--xs);
+      margin-right: var(--md);
+    }
+    p {
+      padding-left: var(--xs);
+    }
+  }
+  > ul {
+    a {
+      color: var(--clr-neutral-400);
+    }
+  }
+}

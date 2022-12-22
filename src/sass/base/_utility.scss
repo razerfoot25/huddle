@@ -2,11 +2,108 @@
 
 .container {
   max-width: 90rem;
-  padding: 1.5em 2em;
+  padding: 2em 1em;
   margin: 0 auto;
 }
 .spacer {
   > * + * {
-    margin-top: 2em;
+    margin-top: 2rem;
+  }
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns:
+    Minmax(1rem, 1fr) repeat(
+      var(--grid-column),
+      Minmax(0, Calc(var(--max-container-width) / var(--grid-column)))
+    )
+    Minmax(1rem, 1fr);
+
+  > * {
+    grid-column: 2 / span var(--grid-column);
+  }
+}
+
+@mixin size {
+  &-1 {
+    padding: var(--xs);
+  }
+  &-2 {
+    padding: var(--sm);
+  }
+  &-3 {
+    padding: var(--md);
+  }
+  &-4 {
+    padding: var(--lg);
+  }
+  &-5 {
+    padding: var(--xl);
+  }
+  &-6 {
+    padding: var(--2xl);
+  }
+}
+
+@mixin ysize {
+  &-1 {
+    padding-block: var(--xs);
+  }
+  &-2 {
+    padding-block: var(--sm);
+  }
+  &-3 {
+    padding-block: var(--md);
+  }
+  &-4 {
+    padding-block: var(--lg);
+  }
+  &-5 {
+    padding-block: var(--xl);
+  }
+  &-6 {
+    padding-block: var(--2xl);
+  }
+}
+
+@mixin xsize {
+  &-1 {
+    padding-inline: var(--xs);
+  }
+  &-2 {
+    padding-inline: var(--sm);
+  }
+  &-3 {
+    padding-inline: var(--md);
+  }
+  &-4 {
+    padding-inline: var(--lg);
+  }
+  &-5 {
+    padding-inline: var(--xl);
+  }
+  &-6 {
+    padding-inline: var(--2xl);
+  }
+}
+
+.p {
+  @include size;
+  &x {
+    @include xsize;
+  }
+  &y {
+    @include ysize;
+  }
+}
+
+.m {
+  @include size;
+  &x {
+    @include xsize;
+  }
+  &y {
+    @include ysize;
   }
 }

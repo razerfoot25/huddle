@@ -1,0 +1,23 @@
+.huddle_landing {
+  &--text {
+    grid-column: 2 / -2;
+  }
+  &--image {
+    grid-column: 2 / -2;
+  }
+}
+
+.huddle_about {
+  row-gap: 2.5em;
+  &--card {
+    grid-column: 2 / -2;
+  }
+}
+.huddle_footer {
+  > div {
+    grid-column: 2 / -2;
+  }
+  > ul {
+    grid-column: 2 / -2;
+  }
+}

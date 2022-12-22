@@ -3,6 +3,15 @@
 @use "../abstracts/breakpoints" as b;
 
 :root {
+  --max-container-width: 90rem;
+  --grid-column: 6;
+  --xs: 0.5em;
+  --sm: 0.75em;
+  --md: 1em;
+  --lg: 2em;
+  --xl: 3em;
+  --2xl: 6em;
+
   @each $base, $shade in $colors {
     @each $shades, $colors in $shade {
       --clr-#{$base}-#{$shades}: #{$colors};
@@ -16,13 +25,15 @@
 }
 
 @each $elem, $value in $size {
-  @each $type, $size in $value {
-    @if ($elem == small) {
+  @if ($elem == small) {
+    @each $type, $size in $value {
       #{$type} {
         font-size: $size;
       }
-    } @else if($elem != small) {
-      @include b.breakpoint(#{$elem}) {
+    }
+  } @else if($elem != small) {
+    @include b.breakpoint(#{$elem}) {
+      @each $type, $size in $value {
         #{$type} {
           font-size: $size;
         }
