@@ -23,6 +23,7 @@ Users should be able to:
 
 ### Screenshot
 
+![Desktop](./screenshot/dekstop.png)
 ![Mobile](./screenshot/mobile.png)
 
 ### Links
@@ -42,6 +43,4 @@ Users should be able to:
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
+- Frontend Mentor - [@razerfoot25](https://www.frontendmentor.io/profile/razerfoot25)
