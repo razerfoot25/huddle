@@ -1,4 +1,5 @@
 @use "../components/buttons" as *;
+@use "../abstracts/breakpoints" as m;
 .huddle_about {
   position: relative;
   z-index: 2;
@@ -8,7 +9,7 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
-
+    gap: var(--xl);
     border-radius: 0.75em;
     box-shadow: 0 0 20px -10px var(--clr-neutral-500);
 
@@ -16,9 +17,26 @@
 
     img {
       padding-top: var(--md);
+      max-height: 20rem;
     }
     p {
       color: var(--clr-neutral-500);
+    }
+
+    @include m.breakpoint(medium) {
+      padding-block: var(--xl);
+      img,
+      div {
+        padding-left: var(--2xl);
+      }
+      flex-direction: row;
+      text-align: left;
+
+      &:nth-child(odd) {
+        img {
+          order: 2;
+        }
+      }
     }
   }
 }
@@ -32,5 +50,11 @@
   button {
     @include btn-red;
     padding-inline: var(--xl);
+  }
+  @include m.breakpoint(medium) {
+    flex-direction: column;
+    justify-self: center;
+    gap: var(--sm);
+    padding-inline: var(--2xl);
   }
 }

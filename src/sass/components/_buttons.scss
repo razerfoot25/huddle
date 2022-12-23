@@ -8,9 +8,10 @@
   font-weight: var(--fw-primary-700);
   color: var(--clr-neutral-600);
   box-shadow: 3px 6px 15px -8px var(--clr-neutral-500);
+  background-color: white;
 
   &:hover {
-    opacity: 0.8;
+    opacity: 0.6;
     cursor: pointer;
   }
 }

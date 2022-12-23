@@ -1,3 +1,4 @@
+@use "../abstracts/breakpoints" as m;
 .huddle_footer {
   position: relative;
   z-index: 1;
@@ -26,7 +27,7 @@
     }
   }
   > ul {
-    a {
+    li a {
       position: relative;
       color: var(--clr-neutral-400);
 
@@ -34,7 +35,7 @@
         &::before {
           content: "";
           position: absolute;
-          inset: 1.5rem auto -0.15rem 0;
+          inset: 1.25rem auto 0 0;
           width: 100%;
           background-color: var(--clr-neutral-400);
         }
@@ -84,6 +85,25 @@
       :nth-child(3) a {
         mask-image: url("../images/instagram.svg");
       }
+    }
+  }
+
+  @include m.breakpoint(medium) {
+    justify-items: center;
+    gap: var(--xl);
+    padding-bottom: var(--2xl);
+    &--logo {
+      height: 2rem;
+    }
+    > div {
+      max-width: 25rem;
+    }
+    > ul {
+      align-self: center;
+    }
+    &--links {
+      align-self: flex-end;
+      gap: var(--3xl);
     }
   }
 }

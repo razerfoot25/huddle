@@ -1,9 +1,20 @@
+@use "../abstracts/breakpoints" as m;
 .huddle_landing {
   &--text {
     grid-column: 2 / -2;
   }
   &--image {
     grid-column: 2 / -2;
+  }
+  @include m.breakpoint(medium) {
+    gap: var(--lg);
+    &--text {
+      grid-column: 2 / 5;
+    }
+
+    &--image {
+      grid-column: 5 / -2;
+    }
   }
 }
 
@@ -12,6 +23,9 @@
   &--card {
     grid-column: 2 / -2;
   }
+  @include m.breakpoint(medium) {
+    column-gap: 3.5em;
+  }
 }
 .huddle_footer {
   > div {
@@ -19,5 +33,23 @@
   }
   > ul {
     grid-column: 2 / -2;
+  }
+  @include m.breakpoint(medium) {
+    > div {
+      &:first-child {
+        grid-column: 2 / 4;
+      }
+      &:last-child {
+        grid-column: 6 / 8;
+      }
+    }
+    > ul {
+      &:nth-child(2) {
+        grid-column: 4 / 5;
+      }
+      &:nth-child(3) {
+        grid-column: 5 / 6;
+      }
+    }
   }
 }

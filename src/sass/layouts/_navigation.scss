@@ -1,8 +1,12 @@
 @use "../components/buttons" as b;
+@use "../abstracts/breakpoints" as m;
 // nav layouts
 .huddle_Nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   &--logo {
-    width: 30%;
+    width: Clamp(7rem, 25vw, 12rem);
   }
 
   &--btn {

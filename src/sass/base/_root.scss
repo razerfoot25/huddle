@@ -1,6 +1,7 @@
 @use "./fonts" as *;
 @use "./colors" as *;
 @use "../abstracts/breakpoints" as b;
+@use "sass:list";
 
 :root {
   --max-container-width: 90rem;
@@ -11,6 +12,7 @@
   --lg: 2em;
   --xl: 3em;
   --2xl: 6em;
+  --3xl: 9em;
 
   @each $base, $shade in $colors {
     @each $shades, $colors in $shade {
@@ -24,20 +26,37 @@
   }
 }
 
-@each $elem, $value in $size {
+// @each $elem, $value in $size {
+//   @if ($elem == small) {
+//     @each $type, $size in $value {
+//       #{$type} {
+//         font-size: $size;
+//       }
+//     }
+//   } @else if($elem != small) {
+//     @include b.breakpoint(#{$elem}) {
+//       @each $type, $size in $value {
+//         #{$type} {
+//           font-size: $size;
+//         }
+//       }
+//     }
+//   }
+// }
+
+@function ToClamp($elem, $size) {
+  $small: 1rem;
+  $large: 1rem;
   @if ($elem == small) {
-    @each $type, $size in $value {
-      #{$type} {
-        font-size: $size;
-      }
-    }
-  } @else if($elem != small) {
-    @include b.breakpoint(#{$elem}) {
-      @each $type, $size in $value {
-        #{$type} {
-          font-size: $size;
-        }
-      }
+    $small: $size;
+  }
+  @return Clamp($small, 20vw, $large);
+}
+
+@each $vp, $value in $size {
+  @each $type, $size in $value {
+    #{$type} {
+      font-size: $size;
     }
   }
 }

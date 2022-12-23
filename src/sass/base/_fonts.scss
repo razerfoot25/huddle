@@ -1,21 +1,14 @@
 $size: (
   small: (
-    h1: 1.5rem,
-    h2: 1.45rem,
-    h3: 1.45rem,
-    h4: 1.45rem,
-    h5: 1.1rem,
-    p: 1rem,
-    a: 1.12rem,
-    button: 0.75rem,
-    small: 0.75rem,
-  ),
-  medium: (
-    h1: 5rem,
-    h2: 2.5rem,
-    h3: 5rem,
-    h4: 2rem,
-    p: 1.5rem,
+    h1: Clamp(1.5rem, 5vw, 3rem),
+    h2: Clamp(1.45rem, 5vw, 2rem),
+    h3: Clamp(1.45rem, 5vw, 2rem),
+    h4: Clamp(1.45rem, 5vw, 2rem),
+    h5: Clamp(1.1rem, 5vw, 2rem),
+    p: Clamp(1rem, 4vw, 1.23rem),
+    a: Clamp(1rem, 5vw, 1rem),
+    button: Clamp(0.75rem, 5vw, 1.25rem),
+    small: Clamp(0.75rem, 5vw, 1rem),
   ),
 );
 
