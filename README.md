@@ -23,7 +23,7 @@ Users should be able to:
 
 ### Screenshot
 
-![screenshot/mobile.png](./screenshot.jpg)
+![huddle/screenshot/mobile.png](./screenshot.jpg)
 
 ### Links
 
