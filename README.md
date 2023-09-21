@@ -28,8 +28,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [https://huddle-jay.netlify.app/](https://your-solution-url.com)
-- Live Site URL: [https://huddle-jay.netlify.app/](https://your-live-site-url.com)
+- Solution URL: [https://huddle-jay.netlify.app/](https://huddle-jay.netlify.app/)
+- Live Site URL: [https://huddle-jay.netlify.app/](https://huddle-jay.netlify.app/)
 
 ## My process
 
